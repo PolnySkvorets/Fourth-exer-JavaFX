@@ -15,16 +15,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Path path = new Path();
-        MoveTo moveTo = new MoveTo();
-        moveTo.setX(100.0f);
+        Path path = new Path(); //  создание обекта класса графического пути
+        MoveTo moveTo = new MoveTo(); // объект класса  - точка начала рисования
+        moveTo.setX(50.0f); // координаты точки начала
         moveTo.setY(150.0f);
-        CubicCurveTo cubicCurveTo = new CubicCurveTo();
-        cubicCurveTo.setControlX1(400.0f);
+        CubicCurveTo cubicCurveTo = new CubicCurveTo(); // создаем объект кривой линии
+        cubicCurveTo.setControlX1(400.0f); // опорная точка искривления линии
         cubicCurveTo.setControlY1(10.0f);
-        cubicCurveTo.setControlX2(275.0f);
+        cubicCurveTo.setControlX2(275.0f);// вторая опорная точка искривления линии
         cubicCurveTo.setControlY2(250.0f);
-        cubicCurveTo.setX(500.0f);
+        cubicCurveTo.setX(100.0f);// координаты конца линии
         cubicCurveTo.setY(150.0f);
          path.getElements().add(moveTo);
          path.getElements().add(cubicCurveTo);
